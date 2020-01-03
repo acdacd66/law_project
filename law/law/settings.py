@@ -56,7 +56,7 @@ ROOT_URLCONF = 'law.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['law/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
