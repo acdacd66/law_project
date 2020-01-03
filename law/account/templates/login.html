@@ -1,17 +1,13 @@
 <body>
-    <h1>로그인</h1>
-    <form method="POST" action="{% url 'login'%}">
-            {% csrf_token %}
-        <input type="text" name="username" id="email" class="inpt" required="required" placeholder="Your id">
-        <label for="text">Your id</label>
-        <input type="password" name="password" id="password" class="inpt" required="required"
-          placeholder="Your password">
-        <label for="password">Your password</label>
-        <input type="checkbox" id="remember" class="checkbox" checked>
-        <label for="remember">Remember me</label>
-        <div class="submit-wrap">
-          <input type="submit" value="Sign in" class="submit">
-          <a href="{% url 'signup' %}" class="more"><input type="button" value="Sign Up" class="submit"></a>
-        </div>
-      </form>
+  <h1>로그인</h1>
+  <form method="POST" action="{% url 'login'%}">
+    {% csrf_token %}
+    아이디 : <input type="text" name="username" id="email" class="inpt" required="required" placeholder="Your id"> <br>
+    
+    패스워드 : <input type="password" name="password" id="password" class="inpt" required="required" placeholder="Your password">
+    
+    <div class="submit-wrap">
+      <input type="submit" value="로그인" class="submit">
+    </div>
+  </form>
 </body>
