@@ -1,8 +1,11 @@
 from django.shortcuts import render
 import requests, pprint
 from bs4 import BeautifulSoup as BS
-
 def home(request):
+    return render(request, 'home.html')
+
+
+def law_crawl(request):
     count=0
     count1=0
     url='http://easylaw.go.kr/CSP/OnhunqueansLstRetrieve.laf?onhunqnaAstSeq=25&pagingType=default&sortType=DEFAULT&REQUEST_DATA_SINGLE_MODE=true&targetRow='
@@ -32,14 +35,9 @@ def home(request):
             tmp1=requests.get(answer)
             html = BS(tmp1.text, 'html.parser')
             real=html.select('ul.question > li.qa > div.q > div.ans')
-           
+            
             for r in real:
                 q_l[count1]=q_l[count1]+r.text
             count1+=1
-        # print(*ul_list, sep='\n')
-        
-    
-   
-    # Create your views here.
-    return render(request, 'home.html',{'q_l':q_l})
+    return render(request, 'law.html',{'q_l':q_l})
 
