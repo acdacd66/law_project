@@ -1,0 +1,7 @@
+<a href="{% url 'lb_new'%}"><h1>글쓰기</h1></a><br><br>
+{% for lb in lawboards%}
+<hr>
+<a href="{%url 'lb_detail' lb.id %}"><h1>제목 : {{lb.title}}</h1></a>
+<h3>내용 : {{lb.body}}</h3>
+<hr>
+{%endfor%}
