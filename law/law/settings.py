@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'account',
     'main',
     'detail_board',
+    'lawboard',
 ]
 
 MIDDLEWARE = [

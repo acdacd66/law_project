@@ -1,0 +1,10 @@
+<h1>detail page</h1>
+<br><br>
+<h1>제목 : {{lb.title}}</h1>
+<h7>작성 시각 : {{lb.pub_date}}</h7>
+<h7>작성자 : {{lb.writer}}</h7>
+<p>내용 : {{lb.body}}</p>
+
+<a href="{% url 'lb_edit' lb.id%}">글 수정</a><br>
+<a href="{% url 'lb_delete' lb.id%}">글 삭제</a>
+
