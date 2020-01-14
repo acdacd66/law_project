@@ -21,7 +21,6 @@ def lawboardCreate(request):
     new_lb.writer = request.user
     new_lb.body = request.POST['body']
     new_lb.save()
-
     return redirect('lb_list')
 
 def lawboardEdit(request, lb_id):
