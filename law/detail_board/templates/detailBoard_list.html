@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for i in F_boards %}
+    {{i.question}}<br>
+    <br>
+    {{i.answer}}<br>
+    <hr>
+    <br>
+{% endfor %}
+
+
+
+{% endblock %}

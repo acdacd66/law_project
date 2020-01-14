@@ -1,0 +1,15 @@
+<body>
+  <h1>로그인</h1>
+  <form method="POST" action="{% url 'login'%}">
+    {% csrf_token %}
+    아이디 : <input type="text" name="username" id="email" class="inpt" required="required" placeholder="Your id"> <br>
+    
+    패스워드 : <input type="password" name="password" id="password" class="inpt" required="required" placeholder="Your password">
+    
+    <div class="submit-wrap">
+      <input type="submit" value="로그인" class="submit">
+    </div>
+  </form>
+  <br>
+  <a href="{% url 'home'%}">홈</a>
+</body>

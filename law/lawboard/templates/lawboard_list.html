@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <form method="POST" id="searchFm">
+        <div class="lbSearch" style="border-style: solid;">
+            <div class="searchBases">
+                <dl>
+                    <dt>관심 법령</dt>
+                    <dd>
+                        <div= class="part">
+                            <select id="law" name="" id=""></select>
+                        </div=>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </form>
+
+    <a href="{% url 'lb_new'%}">
+        <h1>글쓰기</h1>
+    </a>
+
+    <div class="lawboards_list">
+        <div class="rlist">
+            {% for lb in lawboards%}
+            <hr>
+            <a href="{%url 'lb_detail' lb.id %}">
+                <h1>제목 : {{lb.title}}</h1>
+            </a>
+            <h3>내용 : {{lb.body}}</h3>
+            <hr>
+            {%endfor%}
+        </div>
+    </div>
+    <div class="paginator111">
+        {%if lawboards.has_previous%}
+        <a href="?page=1">First</a>
+        <a href="?page={{lawboards.previous_page_number}}">Previous</a>
+        {%endif%}
+
+        <span>{{lawboards.number}}</span>
+        <span>of</span>
+        <span>{{lawboards.paginator.num_pages}}</span>
+
+        {%if lawboards.has_next%}
+        <a href="?page={{lawboards.next_page_number}}">Next</a>
+        <a href="?page={{lawboards.paginator.num_pages}}">Last</a>
+        {%endif%}
+    </div>
+
+</div>
+{%endblock%}
