@@ -13,4 +13,13 @@ class LawBoard(models.Model):
     def __str__(self):
         return self.title
 
+class MeetingBoard(models.Model):
+    title = models.CharField(max_length=100)
+    pub_date = models.DateTimeField('Date published', null = True)
+    writer = models.ForeignKey(User,on_delete = models.CASCADE)
+    body = models.TextField()
+
+    def __str__(self):
+        return self.title
+
 

@@ -1,0 +1,7 @@
+<a href="{% url 'mb_new'%}"><h1>글쓰기</h1></a><br><br>
+{% for mb in meetingboards%}
+<hr>
+<a href="{%url 'mb_detail' mb.id %}"><h1>제목 : {{mb.title}}</h1></a>
+<h3>내용 : {{mb.body}}</h3>
+<hr>
+{%endfor%}
