@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{request.user.username}}님 환영합니다</h1>
+
+
+<h3>스크랩한글들</h3>
+{%for i in scrapped_lawboard%}
+<hr>
+<a href="{%url 'lb_detail' i.id%}">{{i.title}}</a>
+{%endfor%}
+<hr>
+<br>
+<a href="{% url 'home'%}">홈</a>
+
+{%endblock%}

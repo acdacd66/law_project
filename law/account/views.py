@@ -40,3 +40,12 @@ def signup(request):
 def logout(request):
     auth.logout(request)
     return render(request,'login.html')
+
+def mypage(request, pk):
+    mypage = User.objects.get(pk=pk)
+    lawboard = User.objects.get(username= request.user.username)
+    scrapped_lawboard = lawboard.LawBoard_scrap.all()
+    return render(request, 'mypage.html', {'mypage':mypage , 'scrapped_lawboard': scrapped_lawboard})
+
+
+
