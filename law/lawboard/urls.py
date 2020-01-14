@@ -9,6 +9,7 @@ urlpatterns = [
     path('lawboard/update/<int:lb_id>', views.lawboardUpdate , name="lb_update"),
     path('lawboard/<int:lb_id>', views.lawboardDetail, name="lb_detail"),
     path('lawboard/delete/<int:lb_id>', views.lawboardDelete, name="lb_delete"),
+<<<<<<< HEAD
     path('meetingboard', views.meetingboardList , name="mb_list"),
     path('meetingboard/new', views.meetingboardNew , name="mb_new"),
     path('meetingboard/create', views.meetingboardCreate , name="mb_create"),
@@ -17,6 +18,10 @@ urlpatterns = [
     path('meetingboard/<int:lb_id>', views.meetingboardDetail, name="mb_detail"),
     path('meetingboard/delete/<int:lb_id>', views.meetingboardDelete, name="mb_delete"),
 
+=======
+    path('lawboard/scrap/<int:pk>',views.lawboardScrap, name="lb_scrap"),
+    
+>>>>>>> ba85cb0911d1a5c185732e83e54aaef93d47a468
 
     
 ]
