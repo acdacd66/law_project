@@ -43,7 +43,7 @@ def lawboardDelete(request, lb_id):
     delete_lb.delete()
     return redirect('lb_list')
 
-<<<<<<< HEAD
+
 def meetingboardList(request):
     meetingboards= MeetingBoard.objects.all()
     return render(request, 'Meetingboard_list.html', {'meetingboards': meetingboards})
@@ -80,16 +80,12 @@ def meetingboardDelete(request, lb_id):
     delete_mb = MeetingBoard.objects.get(id=mb_id)
     delete_mb.delete()
     return redirect('mb_list')
-=======
+
 def lawboardScrap(request, pk):
     scraped_law = get_object_or_404(LawBoard,pk=pk)
     scraped_law.scrap.add(request.user)
     scraped_law.save()
     return redirect('lb_list')
-
-
->>>>>>> ba85cb0911d1a5c185732e83e54aaef93d47a468
-
 
 
 
