@@ -1,0 +1,10 @@
+<h1>detail page</h1>
+<br><br>
+<h1>제목 : {{mb.title}}</h1>
+<h7>작성 시각 : {{mb.pub_date}}</h7>
+<h7>작성자 : {{mb.writer}}</h7>
+<p>내용 : {{mb.body}}</p>
+
+<a href="{% url 'mb_edit' mb.id%}">글 수정</a><br>
+<a href="{% url 'mb_delete' mb.id%}">글 삭제</a>
+
