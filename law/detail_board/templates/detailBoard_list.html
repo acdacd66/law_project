@@ -1,12 +1,31 @@
 {% extends 'base.html' %}
 {% block content %}
+<a href="{% url 'family_board' %}">가정법률</a><br>
+<a href="{% url 'traffic_board' %}">교통/운전</a><br>
+<a href="{% url 'government_board' %}">국가 및 지자체</a><br>
+<a href="{% url 'army_board' %}">국방/보훈</a><br>
+<a href="{% url 'labor_board' %}">근로/노동</a><br>
+<a href="{% url 'financial_board' %}">금융/금전</a><br>
+<a href="{% url 'trade_board' %}">무역/출입국</a><br>
+<a href="{% url 'leisure_board' %}">문화/여가생활</a><br>
+<a href="{% url 'lawsuit_board' %}">민형사/소송</a><br>
+<a href="{% url 'welfare_board' %}">복지</a><br>
+<a href="{% url 'estate_board' %}">부동산/임대차</a><br>
+<a href="{% url 'business_board' %}">사업</a><br>
+<a href="{% url 'crime_board' %}">사회안전/범죄</a><br>
+<a href="{% url 'client_board' %}">소비자</a><br>
+<a href="{% url 'children_board' %}">아동·청소년/교육</a><br>
+<a href="{% url 'information_board' %}">정보통신/기술</a><br>
+<a href="{% url 'startup_board' %}">창업</a><br>
+<a href="{% url 'eco_board' %}">환경/에너지</a><br>
+<hr>
 {% for i in F_boards %}
-    {{i.question}}<br>
-    <br>
-    {{i.answer}}<br>
-    <hr>
-    <br>
+{{i.question}}<br>
+<br>
+{{i.answer}}<br>
+<hr>
 {% endfor %}
+
 
 
 
